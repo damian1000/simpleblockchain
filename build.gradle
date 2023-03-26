@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.10'
+}
+
+group = 'blockchain'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '1.18'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "18"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "18"
+    }
+}

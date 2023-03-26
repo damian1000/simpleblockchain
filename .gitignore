@@ -2,14 +2,13 @@
 out/
 target/
 bin/
+build/
+.gradle/
 .settings/
 .metadata/
 .idea/
 .class
 .cache
-workspace.xml
 *.iml
+*.xls
 *.log
-*.gz
-*.gradle
-build/
